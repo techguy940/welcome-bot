@@ -4,9 +4,9 @@ WELCOME_CHANNEL_ID = Welcome Channel ID Here #Put it without " " Ex - 6204982624
 LEAVE_CHANNEL_ID = Leave Channel ID Here #Put it without " " Ex - 620363449879052624
 
 import discord
-from discord.ext.commands import Bot
+from discord.ext import commands
 
-bot = Bot(command_prefix = BOT_PREFIX)
+bot = commands.Bot(command_prefix = BOT_PREFIX, intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
